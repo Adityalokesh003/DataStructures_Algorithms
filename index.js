@@ -5,12 +5,11 @@ const mylinkedList = new LinkedList(1)
 mylinkedList.prepend(10)
 mylinkedList.append(50)
 mylinkedList.prepend(10)
-mylinkedList.append(50)
-mylinkedList.append(50)
-mylinkedList.prepend(10)
-mylinkedList.insert(0,111)
 mylinkedList.insert(6,999)
+//console.log(mylinkedList.insert(0,444));
+mylinkedList.getMyList()
+console.log(mylinkedList.remove(-1));
+mylinkedList.getMyList();
+console.log("Length ",mylinkedList.length);
 
-console.log(mylinkedList.insert(0,444));
 //
-console.log(mylinkedList.getMyList())

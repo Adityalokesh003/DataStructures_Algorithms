@@ -57,6 +57,46 @@ class LinkedList {
 
      return newNode.value;
    }
+
+   //Remove At given index
+   remove = (index)=>{
+    if(index >= this.length || index < 0) return undefined;
+
+    if(index === this.length-1) return this.pop(index);
+
+    if(index === 0) return this.removeHeadNode(index);
+
+
+     let previousNode = this.traverseToIndex(index-1);
+     let nodeToBeRemoved = previousNode.next;
+     let nextNode = nodeToBeRemoved.next;
+     previousNode.next = nextNode;
+     this.length--;
+     return nodeToBeRemoved.value;
+
+   }
+
+   //pop
+   pop = ()=>{
+    //console.log("tail head")
+
+     let previousNode  =  this.traverseToIndex(this.length-2);
+     let nodeToBeRemoved = previousNode.next;
+     previousNode.next = null;
+     this.tail = previousNode;
+     this.length--;
+     return nodeToBeRemoved.value;
+   }
+
+   //removeHeadNode
+   removeHeadNode = ()=>{
+    //console.log("remove head")
+    let headNodeToBeRemoved  =  this.head;
+    this.head = headNodeToBeRemoved.next;
+    this.length--;
+    return headNodeToBeRemoved.value;
+   }
+   
    //getMyList
    getMyList = ()=>{
      let myNode = this.head
@@ -70,6 +110,7 @@ class LinkedList {
       
        
      }
+     return this;
    }
   
 }
