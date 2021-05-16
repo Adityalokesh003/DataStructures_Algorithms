@@ -12,5 +12,5 @@ mylinkedList.insert(0,111)
 mylinkedList.insert(6,999)
 
 console.log(mylinkedList.insert(0,444));
-
+//
 console.log(mylinkedList.getMyList())
