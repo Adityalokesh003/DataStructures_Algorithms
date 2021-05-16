@@ -30,7 +30,7 @@ class LinkedList {
      this.length ++;
      return value;
    }
-
+//traverse to node at a index
    traverseToIndex = (index)=>{
      let currentNode  = this.head;
      for(let i=0; i < index; i++){
@@ -39,7 +39,7 @@ class LinkedList {
      return currentNode
    }
 
-
+//insert node at given index
    insert = (index,value)=>{
      let newNode  = new Node(value);
 
@@ -48,9 +48,6 @@ class LinkedList {
      if(index === this.length-1) return this.append(value);
 
      if(index === 0) return this.prepend(value);
-
-       
-
      
      let currentNode = this.traverseToIndex(index-1)
      let nextNode = currentNode.next;
