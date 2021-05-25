@@ -1,6 +1,6 @@
-const Node = require("./Node.js")
+const Node = require("../Node.js.js")
 
-class LinkedList {
+class SinglyLinkedList {
 
   constructor(value){
 
@@ -43,9 +43,9 @@ class LinkedList {
    insert = (index,value)=>{
      let newNode  = new Node(value);
 
-     if(index >= this.length || index < 0) return undefined;
+     if(index > this.length || index < 0) return undefined;
 
-     if(index === this.length-1) return this.append(value);
+     if(index === this.length) return this.append(value);
 
      if(index === 0) return this.prepend(value);
      
@@ -96,6 +96,27 @@ class LinkedList {
     this.length--;
     return headNodeToBeRemoved.value;
    }
+
+   //reversing a LinkedList
+   reverse = ()=>{
+     if(this.length===1) return this.head;
+
+     let first =  this.head;
+     this.tail = this.head;
+     let second = first.next;
+
+     while(second){
+       let temp = second.next;
+
+       second.next = first;
+       first = second;
+       second  = temp;
+     }
+
+     this.head.next = null;
+     this.head = first
+     return this;
+   }
    
    //getMyList
    getMyList = ()=>{
@@ -115,4 +136,4 @@ class LinkedList {
   
 }
 
-module.exports = LinkedList
+module.exports = SinglyLinkedList
