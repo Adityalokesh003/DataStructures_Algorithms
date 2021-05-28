@@ -14,4 +14,8 @@ myBST.insert(21)
 
 console.log(JSON.stringify(myBST));
 
-console.log(myBST.find(2));
+//console.log(myBST.find(2));
+console.log(myBST.breadthFirstSearchRecursive([myBST.root],[]));
+//console.log(myBST.breadthFirstSearch());
+
+

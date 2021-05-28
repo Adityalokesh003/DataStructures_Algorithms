@@ -11,6 +11,7 @@ class Queue {
 
     //peek
     peek = ()=>{
+        if(this.isEmpty()) return null;
         return this.first.value;
     }
 

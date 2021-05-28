@@ -8,7 +8,6 @@ const bubbleSort = (array)=>{ // Time O(n^2) Space O(1)
     
 
     for (let i = 0; i < array.length; i++) {
-        console.log("yeh")
         for (let j = 0; j < array.length; j++) {
             
             if (array[j]>array[j+1]) {
@@ -35,8 +34,6 @@ bubbleSort2 = (array)=>{
 
     while(true){
         swapCount = 0;
-        console.log("yeh")
-
         for (let j = 0; j < array.length; j++) {
             
             if (array[j]>array[j+1]) {
@@ -57,7 +54,7 @@ bubbleSort2 = (array)=>{
 
 }
 
-//console.log(bubbleSort2(numbers));
+console.log(bubbleSort2(numbers));
 
 
 
